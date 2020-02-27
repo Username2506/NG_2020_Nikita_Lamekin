@@ -15,12 +15,12 @@ int main()
     cout << "3 - umnozhenie" << endl;
     cout << "4 - delenie" << endl;
     cin >> c;
-    cout << "rezultat: ";
     switch(c)
     {
-        case 1:cout << a+b << endl;break;
-        case 2:cout << a-b << endl;break;
-        case 3:cout << a*b << endl;break;
-        case 4:cout << a/b << endl;break;
+        case 1:cout <<"rezultat: " << a+b << endl;break;
+        case 2:cout <<"rezultat: " << a-b << endl;break;
+        case 3:cout <<"rezultat: " << a*b << endl;break;
+        case 4:cout <<"rezultat: " << a/b << endl;break;
+        default: cout << "vi vveli nepravilnuyu komandu";
     }
 }
