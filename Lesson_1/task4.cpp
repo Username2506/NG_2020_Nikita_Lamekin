@@ -16,20 +16,11 @@ int main()
     cout << "4 - delenie" << endl;
     cin >> c;
     cout << "rezultat: ";
-    if (c>0 and c<2)
+    switch(c)
     {
-        cout << a+b;cout << endl;
-    }
-    if (c>1 and c<3)
-    {
-        cout << a-b;cout << endl;
-    }
-    if (c>2 and c<4)
-    {
-        cout << a*b;cout << endl;
-    }
-    if (c>3 and c<5)
-    {
-        cout << a/b;cout << endl;
+        case 1:cout << a+b << endl;break;
+        case 2:cout << a-b << endl;break;
+        case 3:cout << a*b << endl;break;
+        case 4:cout << a/b << endl;break;
     }
 }
