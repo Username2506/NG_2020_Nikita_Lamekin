@@ -13,22 +13,14 @@ int main()
   cin >> c;
   k=a;
   if (b>k)
-  {
       k=b;
-  }
   if (c>k)
-  {
       k=c;
-  }
   n=a;
   if (b<n)
-  {
       n=b;
-  }
   if (c<n)
-  {
       n=c;
-  }
   cout << "Raznica mezhdu maximalnoy zarplatoy i minimalnoy: ";
   cout << k-n;
-  }
+}

@@ -10,17 +10,11 @@ int main()
     if (z>999)
     {
         if(z>999999)
-        {
             cout << "Ti millioner!!";
-        }
         if(z<1000000)
-        {
             cout << "Horosho";
-        }
     }
     if (z<1000)
-    {
         cout << "Rabotai bolshe";
-    }
     cout << "...no ti molodec";
 }
