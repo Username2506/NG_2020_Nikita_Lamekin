@@ -4,14 +4,13 @@ using namespace std;
 
 int main()
 {
-   setlocale(LC_ALL,"rus");
-   int n; int m; int k;
-   cout << "Белочка собрала орешки, помогите ей посчитать хватит ли их на зиму";cout << endl;
-   cout << "количество шишек: ";
+   int n, m, k;
+   cout << "Belochka sobrala oreshki, pomogite poschitat hvatit li ih na zimu" << endl;
+   cout << "kolichestvo shishek: ";
    cin >> n;
-   cout << "количество орешков: ";
+   cout << "kolichestvo oreshkov: ";
    cin >> m;
-   cout << "сколько нужно орешков: ";
+   cout << "skolko nuzhno oreshkov: ";
    cin >> k;
    if ((n*m)>(k-1))
    {

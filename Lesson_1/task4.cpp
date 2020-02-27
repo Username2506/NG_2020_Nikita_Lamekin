@@ -4,19 +4,18 @@ using namespace std;
 
 int main()
 {
-    int a; int b; int c;
-    setlocale(LC_ALL,"rus");
-    cout << "введите число а: ";
+    int a, b, c;
+    cout << "vvedite chislo a: ";
     cin >> a;
-    cout << "введите число b: ";
+    cout << "vvedite chislo b: ";
     cin >> b;
-    cout << "в зависимости от желаемого результата введите: ";cout << endl;
-    cout << "1 - сумма";cout << endl;
-    cout << "2 - разница";cout << endl;
-    cout << "3 - умножение";cout << endl;
-    cout << "4 - деление";cout << endl;
+    cout << "v zavisimosti ot zhelaemogo rezultata vvedite: " << endl;
+    cout << "1 - summa" << endl;
+    cout << "2 - raznica" << endl;
+    cout << "3 - umnozhenie" << endl;
+    cout << "4 - delenie" << endl;
     cin >> c;
-    cout << "результат: ";
+    cout << "rezultat: ";
     if (c>0 and c<2)
     {
         cout << a+b;cout << endl;

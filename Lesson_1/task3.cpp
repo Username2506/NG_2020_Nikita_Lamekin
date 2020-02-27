@@ -4,13 +4,12 @@ using namespace std;
 
 int main()
 {
-  setlocale(LC_ALL,"rus");
-  int a;int b; int c;int k; int n;
-  cout << "введи зарплату Васи: ";
+  int a, b, c, k, n;
+  cout << "vvedite zarplatu Vasi: ";
   cin >> a;
-  cout << "введи зарплату Пети: ";
+  cout << "vvedite zarplatu Peti: ";
   cin >> b;
-  cout << "введи зарплату Вовы: ";
+  cout << "vvedite zarplatu Vovi: ";
   cin >> c;
   k=a;
   if (b>k)
@@ -30,6 +29,6 @@ int main()
   {
       n=c;
   }
-  cout << "Разница между максимальной зарплатой и минимальной: ";
+  cout << "Raznica mezhdu maximalnoy zarplatoy i minimalnoy: ";
   cout << k-n;
   }

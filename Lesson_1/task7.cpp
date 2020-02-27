@@ -4,24 +4,23 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL,"rus");
     int z;
-    cout << "Введите свою зарплату: ";
+    cout << "vvedite svoyu zarplatu: ";
     cin >> z;
-    if (z>1000)
+    if (z>999)
     {
         if(z>999999)
         {
-            cout << "Ты миллионер!";
+            cout << "Ti millioner!!";
         }
         if(z<1000000)
         {
-            cout << "Хорошо";
+            cout << "Horosho";
         }
     }
-    if (z<1001)
+    if (z<1000)
     {
-        cout << "Работай больше";
+        cout << "Rabotai bolshe";
     }
-    cout << "...но ты молодец";
+    cout << "...no ti molodec";
 }

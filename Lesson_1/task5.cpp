@@ -5,16 +5,14 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL,"rus");
-    int a, b, c, d, x1, x2, i;
+    int a, b, c, d, x1, x2;
     cout << "ax^2 + bx + c = 0" << endl;
-    cout << "введите а: ";
+    cout << "vvedite a: ";
     cin>> a;
-    cout << "введите b: ";
+    cout << "vvedite b: ";
     cin >> b;
-    cout << "введите с: ";
+    cout << "vvedite c: ";
     cin >> c;
-    i=-1;
     d=(b*b)-(4*a*c);
     cout << "D = " << d << endl;
     if (d==0)
@@ -32,7 +30,7 @@ int main()
     }
     if (d<0)
     {
-       cout << "комплексные корни: "<<endl;
+       cout << "komplexsnie korni: "<<endl;
        d=-d;
        d=sqrt(d);
        cout << "x1 = " <<(-b/(2*a))<<"+"<<(d/(2*a))<<"i"<<endl;

@@ -4,12 +4,10 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL,"rus");
-    int a;
-    int b;
-    cout << "введите число 'a': ";
+    int a,b;
+    cout << "vvedite chislo a: ";
     cin >> a;
-    cout << "введите число 'b': ";
+    cout << "vvedite chislo b: ";
     cin >> b;
     cout << "a+b=";
     cout << a+b;
