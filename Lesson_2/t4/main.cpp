@@ -4,34 +4,34 @@ using namespace std;
 
 int main()
 {
-    int a,i,c,k,cc,kk;
+    int user_number,counter_columns,count_symbols,count_stars,count_symbols_main,count_stars_main;
     cout << "Vvedite chislo: ";
-    cin >> a;
+    cin >> user_number;
     cout << "a)" << endl;
-    for (i=1;i<=a;i++)
+    for (counter_columns = 1; counter_columns <= user_number; counter_columns++)
     {
-        for (c=1;c<=i;c++)
+        for (count_symbols = 1; count_symbols <= counter_columns; count_symbols++)
             cout << "a";
         cout << endl;
     }
     cout << "b)" << endl;
-    for (i=1;i<=a;i++)
+    for (counter_columns = 1; counter_columns <= user_number; counter_columns++)
     {
-        for (c=a;c>=i;c--)
+        for (count_symbols = user_number; count_symbols >= counter_columns; count_symbols--)
             cout << "a";
         cout << endl;
     }
     cout << "c)" << endl;
-    cc=1;
-    kk=1;
-    for (i=1;i<=a;i++)
+    count_symbols_main = 1;
+    count_stars_main = 1;
+    for (counter_columns=1;counter_columns<=user_number;counter_columns++)
     {
-        for (c=cc;c<a;c++)
+        for (count_symbols = count_symbols_main; count_symbols < user_number; count_symbols++)
             cout << " ";
-        for (k=kk;k<=1;k++)
+        for (count_stars = count_stars_main; count_stars <= 1;count_stars++)
             cout << "*";
         cout << endl;
-        cc=cc+1;
-        kk=kk-2;
+        count_symbols_main = count_symbols_main + 1;
+        count_stars_main = count_stars_main - 2;
     }
 }
