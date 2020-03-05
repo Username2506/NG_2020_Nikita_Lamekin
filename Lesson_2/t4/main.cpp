@@ -31,7 +31,7 @@ int main()
         for (count_stars = count_stars_main; count_stars <= 1;count_stars++)
             cout << "*";
         cout << endl;
-        count_symbols_main = count_symbols_main + 1;
-        count_stars_main = count_stars_main - 2;
+        count_symbols_main ++;
+        count_stars_main -=2;
     }
 }
