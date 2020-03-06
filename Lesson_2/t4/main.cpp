@@ -24,14 +24,12 @@ int main()
     cout << "c)" << endl;
     count_symbols_main = 1;
     count_stars_main = 1;
-    for (counter_columns=1;counter_columns<=user_number;counter_columns++)
+    for (counter_columns=1;counter_columns<=user_number;counter_columns++,count_symbols_main ++,count_stars_main -=2)
     {
         for (count_symbols = count_symbols_main; count_symbols < user_number; count_symbols++)
             cout << " ";
         for (count_stars = count_stars_main; count_stars <= 1;count_stars++)
             cout << "*";
         cout << endl;
-        count_symbols_main ++;
-        count_stars_main -=2;
     }
 }
