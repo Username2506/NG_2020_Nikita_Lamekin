@@ -4,15 +4,15 @@ using namespace std;
 
 int main()
 {
-    int school[10]; int myschool, i;
-    for (i = 0; i < 10; i++)
+    int school[10]; int myschool, counter;
+    for (counter = 0; counter < 10; counter++)
     {
         cout << "Vvedite nomer shkoli: ";
-        cin >> school[i];
+        cin >> school[counter];
     }
     cout << "Teper vvedite svoyu shkolu: ";
     cin >> myschool;
-    for (i = 0; i < 10; i++)
-        if (school[i] == myschool)
+    for (counter = 0; counter < 10; counter++)
+        if (school[counter] == myschool)
             cout << endl << "Ya znayu etu shkolu!";
 }
