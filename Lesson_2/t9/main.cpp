@@ -4,29 +4,19 @@ using namespace std;
 
 int main()
 {
-    int count_symbols_main, count_stars_main, counter_columns, user_number, count_symbols, count_stars;
+    int counter_columns, user_number, count_symbols;
     cout << "Vvedite chislo: ";
     cin >> user_number;
-    count_symbols_main = 1;
-    count_stars_main = 1;
-    counter_columns=1;
-    while(counter_columns <= user_number)
+    for(counter_columns = 1; counter_columns <= user_number; counter_columns++)
     {
-        for (count_symbols = count_symbols_main; count_symbols < user_number; count_symbols++)
+        for (count_symbols = 0; count_symbols < user_number - counter_columns; count_symbols++)
             cout << " ";
-        for (count_stars = count_stars_main; count_stars <= 1;count_stars++)
+        for (count_symbols = 0; count_symbols < counter_columns * 2 - 1; count_symbols++)
             cout << "*";
         cout << endl;
-        count_symbols_main = count_symbols_main + 1;
-        count_stars_main = count_stars_main - 2;
-        counter_columns = counter_columns + 1;
-        if (counter_columns > user_number)
-        {
-            for (count_symbols = 1; count_symbols < user_number; count_symbols++)
-            cout << " ";
-            for (count_stars = 1; count_stars <= 1;count_stars++)
-            cout << "*";
-        }
-
     }
+    for (count_symbols = 1; count_symbols < user_number; count_symbols++)
+        cout << " ";
+    for (count_symbols = 0; count_symbols < 1; count_symbols++)
+        cout << "*";
 }
