@@ -15,9 +15,8 @@ int main()
         if (chisla[counter] > biggest)
             biggest = chisla[counter];
         if (chisla [counter] == 0)
-            goto metka;
+            counter = 20;
     }
-    metka:
     for (counter = 0; chisla[counter] != 0; counter++)
     {
         for (count_symbols = 0; count_symbols < (biggest - chisla[counter]) / 2; count_symbols++)
