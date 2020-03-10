@@ -4,11 +4,11 @@ using namespace std;
 
 int main()
 {
-    int chisla[5]; int counter, biggest, column;
+    int chisla[5], counter, biggest, column;
     biggest = 0;
     for (counter = 0; counter < 5; counter++)
     {
-        cout << "Vvedite chislo: ";
+        cout << "Zvezdochek v " << counter + 1 << "-om stolbike: ";
         cin >> chisla[counter];
         if (chisla[counter] > biggest)
             biggest = chisla[counter];
@@ -24,5 +24,4 @@ int main()
         }
         cout << endl;
     }
-
 }
