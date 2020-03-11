@@ -16,6 +16,8 @@ int main()
         if (school[counter] == myschool)
         {
             cout << endl << "Ya znayu etu shkolu!";
-            counter = 10;
+            counter = 11;
         }
+    if (counter == 10)
+        cout << endl << "Ya ne znayu etu shkolu";
 }
