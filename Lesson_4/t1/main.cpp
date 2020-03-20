@@ -9,11 +9,9 @@ int main()
     cin.getline(stroka,100);
     while (stroka[counter] != 0 and counter <= 100)
     {
-        if (stroka[counter] == ' ')
-            if ((stroka[counter-1] != ' ') and (stroka[counter-1] != 0))
+        if ((stroka[counter] > 64 and stroka[counter] < 91) or (stroka[counter] > 96 and stroka[counter] < 123))
+            if (stroka[counter+1] < 65 or (stroka[counter+1] >90 and stroka[counter+1] < 97) or stroka[counter+1] > 122)
                 slova++;
-        if ((stroka[counter] != ' ') and (stroka[counter+1] == 0))
-            slova++;
         counter ++;
     }
     cout << "Slov v stroke: " << slova;
