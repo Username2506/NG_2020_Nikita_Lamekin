@@ -10,7 +10,7 @@ int main()
     cin.getline(stroka,100);
     while (stroka[count_stroka] != 0)
     {
-        if (stroka[count_stroka] > 96 and stroka[count_stroka] < 123)
+        if (stroka[count_stroka] >= 'a' and stroka[count_stroka] <= 'z')
             stroka[count_stroka] -= 32;
         count_stroka++;
     }

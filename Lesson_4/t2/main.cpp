@@ -9,11 +9,11 @@ int main()
     cin.getline(stroka,100);
     while (stroka[counter] != 0)
     {
-        if ((stroka[counter] > 64 and stroka[counter]< 91) or (stroka[counter] > 96 and stroka[counter]<123))
+        if ((stroka[counter] >= 'A' and stroka[counter]<= 'Z') or (stroka[counter] >= 'a' and stroka[counter] <= 'z'))
         {
-            if (stroka[counter-1] < 65 or (stroka[counter-1] > 90 and stroka[counter-1] < 97) or stroka[counter-1] > 122)
+            if (stroka[counter-1] < 'A' or (stroka[counter-1] > 'Z' and stroka[counter-1] < 'a') or stroka[counter-1] > 'z')
                 nachalo = counter;
-            if (stroka[counter+1] < 65 or (stroka[counter+1] > 90 and stroka[counter+1] < 97) or stroka[counter+1] > 122)
+            if (stroka[counter+1] < 'A' or (stroka[counter+1] > 'Z' and stroka[counter+1] < 'a') or stroka[counter+1] > 'z')
                 konec = counter;
         }
         if ((konec - nachalo) > (main_konec - main_nachalo))
