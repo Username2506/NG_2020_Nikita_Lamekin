@@ -11,7 +11,7 @@ int main()
     while (stroka[count_stroka] != 0)
     {
         if (stroka[count_stroka] >= 'a' and stroka[count_stroka] <= 'z')
-            stroka[count_stroka] -= 32;
+            stroka[count_stroka] -= ' ';
         count_stroka++;
     }
     cout << stroka;
