@@ -5,3 +5,5 @@ obj/
 *.depend
 *.layout
 *.exe
+*.pro
+*.pro.user
