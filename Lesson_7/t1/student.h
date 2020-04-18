@@ -9,19 +9,19 @@ class Student {
 public:
     Student();
     string getName();
-    void setName();
+    void setName(string sName);
     string getSurname();
-    void setSurname();
-    int getAge();
-    void setAge();
+    void setSurname(string sSurname);
+    string getAge();
+    void setAge(string sAge);
     string getSex();
-    void setSex();
+    void setSex(string sSex);
     string getStudyForm();
-    void setStudyForm();
+    void setStudyForm(string sStudyForm);
 private:
     string name;
     string surname;
-    int age;
+    string age;
     string sex;
     string studyForm;
 };

@@ -10,7 +10,7 @@ Student::Student()
     surname = ' ';
     sex = ' ';
     studyForm = ' ';
-    age = 0;
+    age = ' ';
 }
 
 string Student::getName()
@@ -18,10 +18,9 @@ string Student::getName()
     return name;
 }
 
-void Student::setName()
+void Student::setName(string sname)
 {
-    cout << "Name: ";
-    getline(cin, name);
+    name = sname;
 }
 
 string Student::getSurname()
@@ -29,21 +28,19 @@ string Student::getSurname()
     return surname;
 }
 
-void Student::setSurname()
+void Student::setSurname(string sSurname)
 {
-    cout << "Surname: ";
-    getline(cin, surname);
+    surname = sSurname;
 }
 
-int Student::getAge()
+string Student::getAge()
 {
     return age;
 }
 
-void Student::setAge()
+void Student::setAge(string sAge)
 {
-    cout << "Age: ";
-    cin >> age;
+    age = sAge;
 }
 
 string Student::getSex()
@@ -51,10 +48,9 @@ string Student::getSex()
     return sex;
 }
 
-void Student::setSex()
+void Student::setSex(string sSex)
 {
-    cout << "Sex: ";
-    getline(cin, sex);
+    sex = sSex;
 }
 
 string Student::getStudyForm()
@@ -62,8 +58,7 @@ string Student::getStudyForm()
     return studyForm;
 }
 
-void Student::setStudyForm()
+void Student::setStudyForm(string sStudyForm)
 {
-    cout << "Study Form: ";
-    getline(cin,  studyForm);
+    studyForm = sStudyForm;
 }
