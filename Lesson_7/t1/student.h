@@ -18,6 +18,8 @@ public:
     void setSex(string sSex);
     string getStudyForm();
     void setStudyForm(string sStudyForm);
+    void findStudent(string name, string surname);
+    void showStudent();
 private:
     string name;
     string surname;

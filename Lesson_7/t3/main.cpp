@@ -21,7 +21,7 @@ int main()
     cntu.findStudent();
     cntu.showAllStudents();
     string facultet;
-    cout << "Enter facultet: ";
+    cout << "\nEnter facultet: ";
     cin >> facultet;
     cntu.showStudentsByFacultet(facultet);
     cntu.removeStudent (mName, mSurname);

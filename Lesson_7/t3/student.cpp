@@ -62,3 +62,21 @@ void Student::setStudyForm(string sStudyForm)
 {
     studyForm = sStudyForm;
 }
+
+void Student::findStudent(string name, string surname)
+{
+    if (name == getName() && surname == getSurname()) {
+        showStudent();
+    }
+}
+
+void Student::showStudent()
+{
+    if (getName() != " ") {
+        cout << "\nName: " << getName() << endl;
+        cout << "Surname: " << getSurname() << endl;
+        cout << "Age: " << getAge() << endl;
+        cout << "Sex: " << getSex() << endl;
+        cout << "Study form: " << getStudyForm() << endl;
+    }
+}

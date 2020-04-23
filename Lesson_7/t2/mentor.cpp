@@ -93,21 +93,17 @@ void Mentor::delStudent(Student student)
 }
 }
 
-void Mentor::findStudent()
+void Mentor::findStudent(string name, string surname)
 {
-    string surname;
-    cout << "\nWhich student you want to find?" << endl;
-    cout << "Enter surname: ";
-    cin >> surname;
     for (int counter = 0; counter < 30; counter++) {
-        if (students[counter].getSurname() == surname) {
-            cout << "Name: " << students[counter].getName() << endl;
-            cout << "Surname: " << students[counter].getSurname() << endl;
-            cout << "Age: " << students[counter].getAge() << endl;
-            cout << "Sex: " << students[counter].getSex() << endl;
-            cout << "Study form: " << students[counter].getStudyForm() << endl;
-            return;
-        }
+        students[counter].findStudent(name, surname);
+    }
+}
+
+void Mentor::showStudents()
+{
+    for (int counter = 0; counter < 30; counter++) {
+        students[counter].showStudent();
     }
 }
 

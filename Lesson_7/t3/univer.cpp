@@ -67,18 +67,7 @@ void Univer::findStudent()
     cout << "Enter student surname: ";
     cin >> surname;
     for (int counter = 0; counter < 100; counter++) {
-        if (mentor[counter].getMentorName() != " "  && mentor[counter].getMentorSurname() != " ") {
-            for (int count_students = 0; count_students < 30; count_students++) {
-                if (mentor[counter].students[count_students].getName() == name && mentor[counter].students[count_students].getSurname() == surname) {
-                    cout << "Name: " << mentor[counter].students[count_students].getName() << endl;
-                    cout << "Surname: " << mentor[counter].students[count_students].getSurname() << endl;
-                    cout << "Age: " << mentor[counter].students[count_students].getAge() << endl;
-                    cout << "Sex: " << mentor[counter].students[count_students].getSex() << endl;
-                    cout << "Study form: " << mentor[counter].students[count_students].getStudyForm() << endl;
-                    return;
-                }
-            }
-        }
+        mentor[counter].findStudent(name, surname);
     }
 }
 
@@ -91,16 +80,8 @@ void Univer::showAllStudents()
             cout << "Surname: " << mentor[counter].getMentorSurname() << endl;
             cout << "Subject: " << mentor[counter].getSubject() << endl;
             cout << "Facultet: " << mentor[counter].getFacultet() << endl;
-            cout << endl << "Students: " << endl << endl;
-            for (int count_students = 0; count_students < 30; count_students++) {
-                if (mentor[counter].students[count_students].getName() != " ") {
-                    cout << "Name: " << mentor[counter].students[count_students].getName() << endl;
-                    cout << "Surname: " << mentor[counter].students[count_students].getSurname() << endl;
-                    cout << "Age: " << mentor[counter].students[count_students].getAge() << endl;
-                    cout << "Sex: " << mentor[counter].students[count_students].getSex() << endl;
-                    cout << "Study form: " << mentor[counter].students[count_students].getStudyForm() << endl << endl;;
-                }
-            }
+            cout << endl << "Students: " << endl;
+            mentor[counter].showStudents();
         }
     }
 }
@@ -114,16 +95,8 @@ void Univer::showStudentsByFacultet(string facultet)
             cout << "Surname: " << mentor[counter].getMentorSurname() << endl;
             cout << "Subject: " << mentor[counter].getSubject() << endl;
             cout << "Facultet: " << mentor[counter].getFacultet() << endl;
-            cout << endl << "Students: " << endl << endl;
-            for (int count_students = 0; count_students < 30; count_students++) {
-                if (mentor[counter].students[count_students].getName() != " ") {
-                    cout << "Name: " << mentor[counter].students[count_students].getName() << endl;
-                    cout << "Surname: " << mentor[counter].students[count_students].getSurname() << endl;
-                    cout << "Age: " << mentor[counter].students[count_students].getAge() << endl;
-                    cout << "Sex: " << mentor[counter].students[count_students].getSex() << endl;
-                    cout << "Study form: " << mentor[counter].students[count_students].getStudyForm() << endl << endl;;
-                }
-            }
+            cout << endl << "Students: " << endl;
+            mentor[counter].showStudents();
         }
     }
 }

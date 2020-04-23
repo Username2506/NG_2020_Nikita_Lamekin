@@ -10,12 +10,12 @@ class Mentor
 {
 public:
     Mentor();
-    Student students[30];
     void addStudent();
     void addStudent(Student student);
     void delStudent();
     void delStudent(Student student);
-    void findStudent();
+    void findStudent(string name, string surname);
+    void showStudents();
     string getMentorName();
     void setMentorName(string mName);
     string getMentorSurname();
@@ -25,6 +25,7 @@ public:
     string getFacultet();
     void setFacultet(string Facultet);
 private:
+    Student students[30];
     string name;
     string surname;
     string subject;
