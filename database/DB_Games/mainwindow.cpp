@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->open_db, &QPushButton::clicked, this, &MainWindow::button_openPressed);
     connect(ui->add, &QPushButton::clicked, this, &MainWindow::button_addPressed);
     connect(ui->save, &QPushButton::clicked, this, &MainWindow::button_savePressed);
+    connect(ui->del, &QPushButton::clicked, this, &MainWindow::button_delPressed);
     ui->table->setHorizontalHeaderLabels(QStringList() << "id" << "name" << "year" << "info");
     ui->table->horizontalHeader()->resizeSection(3, 400);
 }
@@ -33,28 +34,7 @@ void MainWindow::button_openPressed()
         } else {
             ui->path->setText("Connected to database!");
         }
-        cmd = "SELECT * FROM games;";
-        QSqlQuery query;
-        query.exec(cmd);
-        int row = 0;
-        while (query.next()) {
-            row = query.value("id").toInt();
-        }
-        ui->table->setRowCount(row);
-        query.first();
-        ui->table->setItem(0, 0 , new QTableWidgetItem(query.value("id").toString()));
-        ui->table->setItem(0, 1 , new QTableWidgetItem(query.value("name").toString()));
-        ui->table->setItem(0, 2 , new QTableWidgetItem(query.value("year").toString()));
-        ui->table->setItem(0, 3 , new QTableWidgetItem(query.value("info").toString()));
-        row = 1;
-        while (query.next()) {
-            ui->table->setItem(row, 0 , new QTableWidgetItem(query.value("id").toString()));
-            ui->table->setItem(row, 1 , new QTableWidgetItem(query.value("name").toString()));
-            ui->table->setItem(row, 2 , new QTableWidgetItem(query.value("year").toString()));
-            ui->table->setItem(row, 3 , new QTableWidgetItem(query.value("info").toString()));
-            row++;
-        }
-        qDebug() << query.lastError();
+        opening();
     }
 }
 
@@ -83,13 +63,51 @@ void MainWindow::button_savePressed()
             query.next();
         }
         for (int count = row; count < ui->table->rowCount(); count++) {
-            cmd = "INSERT INTO games (name, year, info) VALUES ('" + ui->table->item(count, 1)->text()
+            cmd = "INSERT INTO games (id, name, year, info) VALUES ('" + QString::number(count+1)
+                    + "', '" + ui->table->item(count, 1)->text()
                     + "', '" + ui->table->item(count, 2)->text()
                     + "', '" + ui->table->item(count, 3)->text() + "');";
             query.exec(cmd);
         }
     } else {
         ui->path->setText("No database");
+    }
+}
+
+void MainWindow::button_delPressed()
+{
+    if (db.isOpen()) {
+        cmd = "DELETE FROM games WHERE id = '" + ui->table->item(ui->table->currentRow(), 0)->text() + "';";
+        QSqlQuery query;
+        query.exec(cmd);
+        opening();
+    } else {
+        ui->path->setText("No database");
+    }
+}
+
+void MainWindow::opening()
+{
+    cmd = "SELECT * FROM games;";
+    QSqlQuery query;
+    query.exec(cmd);
+    int row = 0;
+    while (query.next()) {
+        row = query.value("id").toInt();
+    }
+    ui->table->setRowCount(row);
+    query.first();
+    ui->table->setItem(0, 0 , new QTableWidgetItem(query.value("id").toString()));
+    ui->table->setItem(0, 1 , new QTableWidgetItem(query.value("name").toString()));
+    ui->table->setItem(0, 2 , new QTableWidgetItem(query.value("year").toString()));
+    ui->table->setItem(0, 3 , new QTableWidgetItem(query.value("info").toString()));
+    row = 1;
+    while (query.next()) {
+        ui->table->setItem(row, 0 , new QTableWidgetItem(query.value("id").toString()));
+        ui->table->setItem(row, 1 , new QTableWidgetItem(query.value("name").toString()));
+        ui->table->setItem(row, 2 , new QTableWidgetItem(query.value("year").toString()));
+        ui->table->setItem(row, 3 , new QTableWidgetItem(query.value("info").toString()));
+        row++;
     }
 }
 

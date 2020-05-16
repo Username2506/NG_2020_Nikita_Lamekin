@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>510</y>
-      <width>301</width>
+      <width>341</width>
       <height>41</height>
      </rect>
     </property>
@@ -32,7 +32,7 @@
      <rect>
       <x>10</x>
       <y>460</y>
-      <width>301</width>
+      <width>341</width>
       <height>41</height>
      </rect>
     </property>
@@ -46,7 +46,7 @@
       <x>10</x>
       <y>10</y>
       <width>711</width>
-      <height>431</height>
+      <height>391</height>
      </rect>
     </property>
     <property name="layoutDirection">
@@ -81,9 +81,9 @@
    <widget class="QPushButton" name="add">
     <property name="geometry">
      <rect>
-      <x>410</x>
+      <x>370</x>
       <y>510</y>
-      <width>301</width>
+      <width>341</width>
       <height>41</height>
      </rect>
     </property>
@@ -94,14 +94,27 @@
    <widget class="QPushButton" name="save">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>460</y>
-      <width>301</width>
+      <x>10</x>
+      <y>410</y>
+      <width>701</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>save changes</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="del">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>460</y>
+      <width>341</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>delete row</string>
     </property>
    </widget>
   </widget>

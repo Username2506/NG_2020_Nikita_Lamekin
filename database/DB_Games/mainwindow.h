@@ -23,6 +23,8 @@ private slots:
     void button_openPressed();
     void button_addPressed();
     void button_savePressed();
+    void button_delPressed();
+    void opening();
 
 private:
     Ui::MainWindow *ui;
